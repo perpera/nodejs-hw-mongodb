@@ -10,5 +10,3 @@ const bootstrap = async () => {
 };
 
 bootstrap();
-
-console.log('Hello World!');
