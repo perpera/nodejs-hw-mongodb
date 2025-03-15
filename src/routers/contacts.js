@@ -1,6 +1,6 @@
 // src/routers/contacts.js
 
-import { express, Router } from 'express';
+import express, { Router } from 'express';
 
 import {
   getContactsController,
