@@ -16,12 +16,17 @@ import {
 } from '../validation/contacts.js';
 import { isValidId } from '../middlewares/isValidId.js';
 import { validateBody } from '../middlewares/validateBody.js';
+import {authenticate} from '../middlewares/authenticate.js';
+import {checkUser} from '../middlewares/checkUser.js';
 
 const router = Router();
 const jsonParser = express.json({
   type: ['application/json', 'application/vnd.api+json'],
   limit: '100kb',
 });
+
+router.use(authenticate);
+router.use(checkUser);
 
 router.get('/contacts', ctrlWrapper(getContactsController));
 
