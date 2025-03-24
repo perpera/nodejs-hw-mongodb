@@ -11,19 +11,15 @@ if (!user) {
 }
 
 const {contactId} = req.params;
-if (!contactId) {
-    next(createHttpError(403));
-    return;
-}
+if (contactId) {
+    const contact = await ContactsCollection.findOne({
+      _id: contactId,
+      userId: user._id,
+    });
 
-const contact = await ContactsCollection.findOne({
-    _id: contactId,
-    userId: user._id
-});
-if (contact) {
-    next();
-    return;
-}
-
-next(createHttpError(403));
+    if (!contact) {
+      return next(createHttpError(403));
+}}
+  
+next();
 };
