@@ -17,6 +17,7 @@ import {
 import { isValidId } from '../middlewares/isValidId.js';
 import { validateBody } from '../middlewares/validateBody.js';
 import {authenticate} from '../middlewares/authenticate.js';
+import {checkUser} from '../middlewares/checkUser.js';
 
 const router = Router();
 const jsonParser = express.json({
@@ -25,6 +26,7 @@ const jsonParser = express.json({
 });
 
 router.use(authenticate);
+router.use(checkUser);
 
 router.get('/', ctrlWrapper(getContactsController));
 
