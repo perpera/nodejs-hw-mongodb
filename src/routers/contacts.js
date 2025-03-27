@@ -51,6 +51,10 @@ router.patch(
   '/:contactId',
   isValidId,
   jsonParser,
+  (req, res, next) => {
+    req.body.userId = req.user.id.toString();
+    next();
+  },
   validateBody(updateContactSchema),
   ctrlWrapper(patchContactController),
 );
