@@ -1,4 +1,6 @@
-import {registerUser, loginUser, refreshUsersSession, logoutUser} from '../services/auth.js';
+// src/controllers/auth.js
+
+import {registerUser, loginUser, refreshUsersSession, logoutUser, requestResetToken, resetPassword} from '../services/auth.js';
 import {THIRTY_DAYS} from '../constants/index.js';
 
 export const registerUserController = async (req, res) => {
@@ -57,4 +59,22 @@ export const logoutUserController = async (req, res) => {
   res.clearCookie('refreshToken');
 
   res.status(204).send();
+};
+
+export const requestResetEmailController = async (req, res) => {
+  await requestResetToken(req.body.email);
+  res.send({
+    message: 'Reset password email was successfully sent!',
+    status: 200,
+    data: {}
+  });
+};
+
+export const resetPasswordController = async (req, res) => {
+  await resetPassword(req.body);
+  res.send({
+    message: 'Password was successfully reset!',
+    status: 200,
+    data: {}
+  });
 };
