@@ -40,10 +40,6 @@ router.get(
 router.post(
   '/',
   jsonParser,
-  (req, res, next) => {
-    req.body.userId = req.user.id.toString();
-    next();
-  },
   upload.single('photo'),
   validateBody(createContactSchema),
   ctrlWrapper(createContactController),
@@ -53,10 +49,6 @@ router.patch(
   '/:contactId',
   isValidId,
   jsonParser,
-  (req, res, next) => {
-    req.body.userId = req.user.id.toString();
-    next();
-  },
   upload.single('photo'),
   validateBody(updateContactSchema),
   ctrlWrapper(patchContactController),
