@@ -15,8 +15,8 @@ tags:
   - name: Auth
     description: Auth operations.
 servers:
-  - url: http://127.0.0.1:2020
-  - url: https://127.0.0.1:3000
+  - url: https://hw2-mongodb-c714.onrender.com
+  - url: http://127.0.0.1:3000
 paths:
   /contacts:
     get:
