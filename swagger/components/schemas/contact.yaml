@@ -1,0 +1,56 @@
+# swagger/components/schemas/contact.yaml
+
+type: object
+required:
+  - _id
+  - name
+  - phoneNumber
+  - contactType
+  - userId
+  - createdAt
+  - updatedAt
+properties:
+  _id:
+    description: Unique identifier of a contact
+    type: string
+    example: 65e4decdd286b30065d54af9
+  name:
+    description: Name of the contact
+    type: string
+    example: John Doe
+  phoneNumber:
+    description: Phone number of a contact
+    type: string
+    example: 380986785645
+  email:
+    description: Email of a contact
+    type: string
+    example: johndoe@example.com
+  isFavourite:
+    description: Favourite contact indicator
+    type: boolean
+    example: false
+  contactType:
+    description: Type of the contact
+    type: string
+    enum: [work, home, personal]
+    example: home
+  userId:
+    description: ID of an user who owns the contact
+    type: string
+    example: 65e4decdd286b30065d54af9
+  photo:
+    description: Link to contact's avatar
+    type: string
+    example: https://res.cloudinary.com/dv3smyujf/image/upload/photo.jpg
+  createdAt:
+    description: Timestamp of contact creation
+    type: string
+    format: date-time
+    example: 2025-01-01T12:00:00Z
+  updatedAt:
+    description: Timestamp of the latest update of a contact
+    type: string
+    format: date-time
+    example: 2025-01-01T12:00:00Z
+
