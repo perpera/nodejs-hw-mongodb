@@ -1,7 +1,7 @@
 #/swagger/paths/contacts/post.yaml
 
 tags:
-  - Contact
+  - Contacts
 summary: Create contact
 operationId: createContact
 description: Add a new contact to the database
