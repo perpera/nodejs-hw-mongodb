@@ -627,7 +627,7 @@
         "requestBody": {
           "required": true,
           "content": {
-            "multipart\\form-data": {
+            "multipart/form-data": {
               "schema": {
                 "type": "object",
                 "properties": {
