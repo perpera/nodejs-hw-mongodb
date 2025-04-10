@@ -48,16 +48,18 @@ parameters:
     description: Sort order (1 for ascending, -1 for descending)
     example: 1
   - in: query
-    name: contactType
+    name: type
     schema:
       type: string
       enum: [work, home, personal]
+    required: false
     description: Filter by contact type
     example: work
   - in: query
     name: isFavourite
     schema:
       type: boolean
+    required: false
     description: Filter by favourite status
     example: true
 responses:
