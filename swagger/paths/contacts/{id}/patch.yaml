@@ -51,7 +51,7 @@ responses:
   '200':
     description: Contact updated successfully
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -70,7 +70,7 @@ responses:
   '400':
     description: Bad request error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -97,7 +97,7 @@ responses:
   '404':
     description: Not found error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:

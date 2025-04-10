@@ -8,7 +8,7 @@ responses:
   '200':
     description: Session refreshed successfully
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -36,7 +36,7 @@ responses:
   '401':
     description: Unauthorized error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:

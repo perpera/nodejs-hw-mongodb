@@ -64,7 +64,7 @@ responses:
   '200':
     description: Successfully received contacts
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -114,7 +114,7 @@ responses:
   '400':
     description: Bad request error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:

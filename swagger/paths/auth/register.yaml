@@ -7,7 +7,7 @@ security: []
 requestBody:
   required: true
   content:
-    application\json:
+    application/json:
       schema:
         type: object
         required:
@@ -28,7 +28,7 @@ responses:
   '201':
     description: User registered successfully
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -47,7 +47,7 @@ responses:
   '400':
     description: Bad request error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -72,7 +72,7 @@ responses:
   '409':
     description: Conflict error
     content:
-      application\json:
+      application/json:
        schema:
         type: object
         required:

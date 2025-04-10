@@ -15,7 +15,7 @@ responses:
   '400':
     description: Bad request error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
@@ -40,7 +40,7 @@ responses:
   '401':
     description: Unauthorized error
     content:
-      application\json:
+      application/json:
         schema:
           type: object
           required:
